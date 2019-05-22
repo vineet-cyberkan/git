@@ -146,3 +146,111 @@ $ git merge login
 
 
 $ git branch   // to see all the branches
+
+
+
++++++++++++++++++++++++++++++++ commands examples start +++++++++++++++++++
+
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master2)
+$ git status
+On branch master2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        git.md
+
+nothing added to commit but untracked files present (use "git add" to
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master2)
+$ git add .
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master2)
+$ git commit -m "master2 branch created"
+[master2 3e08475] master2 branch created
+ 1 file changed, 148 insertions(+)
+ create mode 100644 git.md
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master2)
+$ git status
+On branch master2
+nothing to commit, working tree clean
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master2)
+$ git checkout loin
+error: pathspec 'loin' did not match any file(s) known to git
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master2)
+$ git checkout login
+Switched to branch 'login'
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (login)
+$ git merge master2
+Updating db1c462..3e08475
+Fast-forward
+ git.md | 148 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 148 insertions(+)
+ create mode 100644 git.md
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (login)
+$ git branch
+* login
+  master
+  master2
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (login)
+$ git status
+On branch login
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   git.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (login)
+$ git add .
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (login)
+$ git commit -m "git.md added to login branch"
+[login faa0d56] git.md added to login branch
+ 1 file changed, 6 insertions(+)
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (login)
+$ git status
+On branch login
+nothing to commit, working tree clean
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (login)
+$ git checkout master2
+Switched to branch 'master2'
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master2)
+$ git status
+On branch master2
+nothing to commit, working tree clean
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master2)
+$ git checkout master
+Switched to branch 'master'
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master)
+$ git merge master2
+Updating db1c462..3e08475
+Fast-forward
+ git.md | 148 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 148 insertions(+)
+ create mode 100644 git.md
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master)
+$
+
+
+
++++++++++++++++++++++++++++++++ commands examples end +++++++++++++++++++
