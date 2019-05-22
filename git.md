@@ -66,3 +66,9 @@ $ git rm --cached git.md
 // to commit files use below given command
 
 $ git commit -m "initial commit"    // "-m" stands for master branch  "initial commit" stands for the comment what changes are commited 
+
+// Tips before commting changes don't froget to check status "$ git status"
+// it is shows changes then use 
+//"$ git add ." to add all files or 
+//"$ git add <filename>"  // to add single file
+
