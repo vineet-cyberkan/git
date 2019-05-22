@@ -95,3 +95,51 @@ $ git commit -m "working on login module"
 to switch you branch use 
 
 $ git checkout login   /// 'login' is your branch name 
+
+
+
+
+
+
+++++++++++++++++++++++++++ please have a look start ++++++++++++++++++++++++++++++++++
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master)
+$ git checkout login
+Switched to branch 'login'
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (login)
+$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        git.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (login)
+$ git commit -m "working on login module added new branch 'login'"
+On branch login
+Changes not staged for commit:
+        modified:   git.md
+
+no changes added to commit
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (login)
+$ git add .
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (login)
+$ git commit -m "working on login module added new branch 'login'"
+[login 4000c28] working on login module added new branch 'login'
+ 1 file changed, 23 insertions(+)
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (login)
+$ git checkout master
+Switched to branch 'master'
+
+
+++++++++++++++++++++++++++ please have a look end++++++++++++++++++++++++++++++++++
+
+
+// Git merge
+
+to merge branches use "$ git merge <branchname>"
+
+$ git merge login
