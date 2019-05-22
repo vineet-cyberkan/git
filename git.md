@@ -55,6 +55,7 @@ $ git add .  // to add all files in current directory
 
 $ git add git.md   // git.md file added to git to check you can use $ git status
 
+$ git status
 
 // if you want to remove cashed file use below given command
 "git rm --cached <file>..."
@@ -72,3 +73,25 @@ $ git commit -m "initial commit"    // "-m" stands for master branch  "initial c
 //"$ git add ." to add all files or 
 //"$ git add <filename>"  // to add single file
 
+// use of git .gitignore
+
+file name or directory name written in .gitignore will not be commited in git
+
+
+
+// What are branches 
+
+For this let's suppose a team is working on multiple modules and you are working for a module that is known as login
+
+then you can create a branch "$ git branch login"
+above mentioned command created a new branch but not switched the branch 
+
+you can check it by using "$ git status"
+
+to switch the branch you have to commit your changes on new branch
+
+$ git commit -m "working on login module" 
+
+to switch you branch use 
+
+$ git checkout login   /// 'login' is your branch name 
