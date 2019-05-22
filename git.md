@@ -72,3 +72,14 @@ $ git commit -m "initial commit"    // "-m" stands for master branch  "initial c
 //"$ git add ." to add all files or 
 //"$ git add <filename>"  // to add single file
 
+// use of git .gitignore
+
+file name or directory name written in .gitignore will not be commited in git
+
+
+
+// What are branches 
+
+For this let's suppose a team is working on multiple modules and you are working for a module that is known as login
+
+then you can create a branch "$ git branch login"

@@ -1,1 +1,3 @@
 log.txt
+# directory name to ignore the directory which should not be commited
+/dirname
