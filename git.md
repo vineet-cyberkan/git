@@ -63,3 +63,6 @@ $ git rm --cached git.md
 
 //if now you will check for staus "$ git status" it will return untracked files 
 
+// to commit files use below given command
+
+$ git commit -m "initial commit"    // "-m" stands for master branch  "initial commit" stands for the comment what changes are commited 
