@@ -254,3 +254,141 @@ $
 
 
 +++++++++++++++++++++++++++++++ commands examples end +++++++++++++++++++
+
+
+
+
+
+
+
+
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master)
+$ git add .
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   README.md
+
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master)
+$ git commit -m "updated readme.md file"
+[master 78b6e2e] updated readme.md file
+ 1 file changed, 25 insertions(+)
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master)
+$ git fetch
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master)
+$ git fetch git
+warning: no common commits
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From https://github.com/vineet-cyberkan/git
+ * [new branch]      master     -> git/master
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master)
+$ git branch
+  login
+* master
+  master2
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master)
+$ git push -u git master
+To https://github.com/vineet-cyberkan/git.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/vineet-cyberkan/git.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=git/<branch> master
+
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master)
+$ git pull git master
+From https://github.com/vineet-cyberkan/git
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master)
+$ git pull git login
+fatal: couldn't find remote ref login
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master)
+$ git pull git master --force
+From https://github.com/vineet-cyberkan/git
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master)
+$ git pull --rebase
+There is no tracking information for the current branch.
+Please specify which branch you want to rebase against.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> master
+
+
+vineet.kumar@Nvineetkumar MINGW64 /e/work/Git_for_biggners (master)
+$ git pull git master --rebase
+From https://github.com/vineet-cyberkan/git
+ * branch            master     -> FETCH_HEAD
+First, rewinding head to replay your work on top of it...
+Applying: creating a doc for git biggners
+Applying: initial commit
+Applying: initial commit
+Applying: discription added to about the commit command
+Applying: git ignore file added
+Applying: working on login module added new branch 'login'
+Applying: working on login module added new branch 'login'
+.git/rebase-apply/patch:23: trailing whitespace.
+// What are branches
+.git/rebase-apply/patch:28: trailing whitespace.
+above mentioned command created a new branch but not switched the branch
+.git/rebase-apply/patch:34: trailing whitespace.
+$ git commit -m "working on login module"
+.git/rebase-apply/patch:36: trailing whitespace.
+to switch you branch use
+.git/rebase-apply/patch:38: trailing whitespace.
+$ git checkout login   /// 'login' is your branch name
+warning: 5 lines add whitespace errors.
+Using index info to reconstruct a base tree...
+M       git.md
+Falling back to patching base and 3-way merge...
+Auto-merging git.md
+CONFLICT (content): Merge conflict in git.md
+error: Failed to merge in the changes.
+hint: Use 'git am --show-current-patch' to see the failed patch
+Patch failed at 0007 working on login module added new branch 'login'
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
