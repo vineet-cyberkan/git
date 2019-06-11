@@ -182,7 +182,18 @@ origin git@account_name.git.beanstalkapp.com:/acccount_name/repository_name.git 
 origin git@account_name.git.beanstalkapp.com:/acccount_name/repository_name.git (push)
 Note: A remote repository can have any name. It’s common practice to name the remote repository ‘origin’.
 
-git clone
+## Quick Example
+
+…or create a new repository on the command line
+echo "# angular-8-test-app" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/vineet-cyberkan/angular-8-test-app.git
+git push -u origin master    // to set upstreem
+
+
+## git clone
 To create a local working copy of an existing remote repository, use git clone to copy and download the repository to a computer. Cloning is the equivalent of git init when working with a remote repository. Git will create a directory locally with all files and repository history.
 
 Usage:
