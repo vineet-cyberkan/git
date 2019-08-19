@@ -192,6 +192,11 @@ git commit -m "first commit"
 git remote add origin https://github.com/vineet-cyberkan/angular-8-test-app.git
 git push -u origin master    // to set upstreem
 
+git pull --rebase
+git pull origin --rebase
+git pull origin master --rebase
+
+git push --force origin master
 
 ## git clone
 To create a local working copy of an existing remote repository, use git clone to copy and download the repository to a computer. Cloning is the equivalent of git init when working with a remote repository. Git will create a directory locally with all files and repository history.
