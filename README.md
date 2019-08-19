@@ -196,6 +196,7 @@ git pull --rebase
 git pull origin --rebase
 git pull origin master --rebase
 
+git push --set-upstream origin master
 git push --force origin master
 
 ## git clone
